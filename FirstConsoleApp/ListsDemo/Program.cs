@@ -30,7 +30,7 @@ namespace ListsDemo
 
             //customers.Add(prod1);
 
-            var customerList = new List<Customer>();
+            //var customerList = new List<Customer>();
 
             var customer = new Customer();
             customer.Id = 101;

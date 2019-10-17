@@ -12,11 +12,19 @@ namespace SecondProject
         {
             //BoxingDemo();
             //AsDemo();
-            OutRefDemo();
+            //OutRefDemo();
             //DictionaryDemo();
 
             // This to be covered after delegates and events.
             //CoVarDemo();
+
+            // For Unit Testing.
+            UnitTestDemo();
+        }
+
+        static void UnitTestDemo()
+        {
+            //Customer
         }
 
         static void BoxingDemo()
@@ -104,6 +112,7 @@ namespace SecondProject
 
         static void DictionaryDemo()
         {
+            // Generics.
             Dictionary<int, string> dc1 = new Dictionary<int, string>();
             dc1.Add(1, "One");
             dc1.Add(2, "Two");
@@ -112,7 +121,7 @@ namespace SecondProject
             //foreach(var item in dc1)
             //foreach(KeyValuePair<int, string> item in dc1)
             foreach (var item in dc1)
-                {
+            {
                 Console.WriteLine("Key: " + item.Key + " Value: " + item.Value);
                 Console.WriteLine("Key: {0}. Value: {1}", item.Key, item.Value);
                 Console.WriteLine($"Key: {item.Key}. Value: {item.Value}");
@@ -120,7 +129,7 @@ namespace SecondProject
         }
 
         #region CoVariance and ContraVariance
-        
+
         static void SetObject(object o)
         {
             Console.WriteLine($"Inside SetObject: {o}");

@@ -46,6 +46,7 @@
     <Compile Include="3Series.cs" />
     <Compile Include="BMW.cs" />
     <Compile Include="Car.cs" />
+    <Compile Include="MyCustomException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

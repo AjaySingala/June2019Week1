@@ -13,58 +13,39 @@ namespace FileIODemos
         {
             //StreamReaderDemo();
             //FoldersDemo();
-            ExceptionDemo();
-
-            //try
-            //{
-            //    int i = 10;
-            //    int j = 0;
-            //    Console.WriteLine(i / j);
-            //}
-
-            //catch (DivideByZeroException dex)
-            //{
-            //    Console.WriteLine("ERROR! You are trying to divide by ZERO!!!");
-            //    Console.WriteLine("Message: " + dex.Message);
-            //    Console.WriteLine("Message: " + dex.StackTrace);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine("ERROR! You are trying to divide by ZERO!!!");
-            //    Console.WriteLine("Message: " + ex.Message);
-            //    Console.WriteLine("Message: " + ex.StackTrace);
-            //}
+            //FileExceptionDemo();
         }
 
         static void StreamReaderDemo()
         {
             string filename = @"D:\Temp\SampleFile.txt";
-            Console.WriteLine("StreamReader #1");
-            StreamReader sr = new StreamReader(filename);
-            //Console.WriteLine(sr.ReadLine());
-            Console.WriteLine(sr.ReadToEnd());
-            sr.Close();
+            //Console.WriteLine("StreamReader #1");
+            //StreamReader sr = new StreamReader(filename);
+            ////Console.WriteLine(sr.ReadLine());
+            //var content = sr.ReadToEnd();
+            //Console.WriteLine(content);
+            //sr.Close();
 
-            Console.WriteLine("StreamWriter #1");
-            string f2 = @"D:\Temp\SampleFile2.txt";
-            StreamWriter sw = new StreamWriter(f2);
-            sw.WriteLine("This is the first line.");
-            sw.WriteLine("This is the second line.");
-            sw.Close();
+            //Console.WriteLine("StreamWriter #1");
+            //string f2 = @"D:\Temp\SampleFile2.txt";
+            //StreamWriter sw = new StreamWriter(f2);
+            //sw.WriteLine("This is the first line.");
+            //sw.WriteLine("This is the second line.");
+            //sw.Close();
 
-            Console.WriteLine("StreamReader #2");
-            StreamReader sr2 = new StreamReader(f2);
-            Console.WriteLine(sr2.ReadToEnd());
-            sr2.Close();
+            //Console.WriteLine("StreamReader #2");
+            //StreamReader sr2 = new StreamReader(f2);
+            //Console.WriteLine(sr2.ReadToEnd());
+            //sr2.Close();
 
-            Console.WriteLine("StreamReader #3");
-            StreamReader sr3 = new StreamReader(filename);
-            string s;
-            while ((s = sr3.ReadLine()) != null)
-            {
-                Console.WriteLine(s);
-            }
-            sr3.Close();
+            //Console.WriteLine("StreamReader #3");
+            //StreamReader sr3 = new StreamReader(filename);
+            //string s;
+            //while ((s = sr3.ReadLine()) != null)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            //sr3.Close();
 
 
             Console.WriteLine("StreamWriter #2");
@@ -88,12 +69,14 @@ namespace FileIODemos
         {
             string path = @"D:\Temp";
             string[] dirs = Directory.GetDirectories(path);
+            Console.WriteLine();
+            Console.WriteLine("Folders here...");
             foreach (string dir in dirs)
             {
                 Console.WriteLine(dir);
             }
-
-            Console.WriteLine("Files in folder...)");
+            Console.WriteLine();
+            Console.WriteLine("Files in folder...");
             string[] files = Directory.GetFiles(path);
             foreach (string i in files)
             {
@@ -101,12 +84,13 @@ namespace FileIODemos
             }
         }
 
-        static void ExceptionDemo()
+        static void FileExceptionDemo()
         {
             StreamReader sr = null;
             try
             {
-                string f2 = @"D:\Temp\SampleFile2.txt";
+                Console.WriteLine();
+                string f2 = @"D:\Temp\SampleFile201.txt";
                 sr = new StreamReader(f2);
                 Console.WriteLine(sr.ReadToEnd());
 

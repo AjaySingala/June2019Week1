@@ -76,6 +76,7 @@ namespace SerDemo
 
             string output = JsonConvert.SerializeObject(product);
             Console.WriteLine(output);
+            #region Sample JSON String
             //{
             //  "Name": "Apple",
             //  "ExpiryDate": "2008-12-28T00:00:00",
@@ -86,8 +87,9 @@ namespace SerDemo
             //    "Large"
             //  ]
             //}
+            #endregion
 
-            Product deserializedProduct = 
+            Product deserializedProduct =
                 JsonConvert.DeserializeObject<Product>(output);
             Console.WriteLine(deserializedProduct.Name);
         }
